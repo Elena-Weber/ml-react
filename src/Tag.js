@@ -12,15 +12,27 @@ const Tag = (props) => {
             </button>
             <button
                 type="button"
-                value="all"
+                value="love"
                 name="filter"
-                onClick={(e) => console.log(e.target.value)}>All quotes
+                onClick={(e) => console.log(e.target.value)}>Love
             </button>
             <button
                 type="button"
                 value="happiness"
                 name="filter"
                 onClick={(e) => console.log(e.target.value)}>Happiness
+            </button>
+            <button
+                type="button"
+                value="science"
+                name="filter"
+                onClick={(e) => console.log(e.target.value)}>Science
+            </button>
+            <button
+                type="button"
+                value="nature"
+                name="filter"
+                onClick={(e) => console.log(e.target.value)}>Nature
             </button>
         </div>
     )
