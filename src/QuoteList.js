@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import Tag from './Tag.js'
-import Quote from './Quote.js'
+import Tag from './Tag.js';
+import Quote from './Quote.js';
+import Search from './Search.js';
 
 class QuoteList extends Component {
     constructor() {
@@ -9,13 +10,14 @@ class QuoteList extends Component {
         this.state = {
             quotes: [],
             filtering: "None",
+            searchedWord: "",
             isLoaded: false,
             error: null
         }
     }
 
     // what to do after the component has mounted
-    async componentDidMount() {
+    componentDidMount() {
         fetch("https://quotable.io/quotes?limit=50")
         .then(resp => resp.json())
         .then(data => { //console.log(data.results[7].tags)
@@ -33,9 +35,19 @@ class QuoteList extends Component {
         )
     }
 
+    searchForQuote = (quo) => {
+        this.setState({
+            searchedWord: quo
+        })
+    }
+
 // displaying quotes
 filterQuotes = () => {
-    let initialQuotes = this.state.quotes
+    let searchedWordLowerCase = this.state.searchedWord.toLowerCase() // setting searched letters to lower case
+
+    let initialQuotes = this.state.quotes.filter(q => q.content.toLowerCase().includes(searchedWordLowerCase)) // looking for them among quotes
+    // let initialQuotes = this.state.quotes.filter(q => console.log(q.content))
+
     let allFamous = initialQuotes.filter(q => q.tags.includes("famous-quotes"))
     let allWisdom = initialQuotes.filter(q => q.tags.includes("wisdom"))
     let allHappiness = initialQuotes.filter(q => q.tags.includes("happiness"))
@@ -68,7 +80,7 @@ updateFilter = (category) => { // setting state category in state to trigger fil
 
     render() {
         const { error, isLoaded } = this.state;
-console.log(this.state.quotes.length)
+//console.log(this.state.quotes.length)
         if (error) { // what to display in case of error
             return <div>Error: {error.message}</div>
         } else if (!isLoaded) { // what to display while waiting for quotes to load
@@ -76,6 +88,9 @@ console.log(this.state.quotes.length)
         } else { // components to display
             return (
             <>
+                <div className="search">
+                    <Search searchQuoteProp={this.state.searchedWord} search={this.searchForQuote} />
+                </div>
                 <div className="tags">
                     <Tag filtering={this.state.filtering} updateFilter={this.updateFilter}/>
                 </div>
