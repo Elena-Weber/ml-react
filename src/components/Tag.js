@@ -3,7 +3,7 @@ import React from 'react';
 const Tag = (props) => {
     return (
         <div className="tag">
-            <h2 className="filterHeading">Categories of quotes:</h2>
+            <h2 className="filterCategories">Categories of quotes:</h2>
             <button
                 type="button"
                 value="famous"

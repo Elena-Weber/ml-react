@@ -1,10 +1,10 @@
 import './App.css';
-import QuoteList from './QuoteList';
+import QuoteList from './containers/QuoteList';
 
 function App() {
   return (
     <div className="App">
-      <h1>QUOTATOR</h1>
+      <h1 className="heading">QUOTATOR</h1>
       <QuoteList/>
     </div>
   );
