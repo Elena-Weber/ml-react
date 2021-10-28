@@ -9,7 +9,7 @@ const Quote = (quotes) => {
                 <h3 className="quoteContent"> {q.props.quotes.content} </h3>
                     <div className="details">
                         {/* <p><span className="quoteDetails">Source:</span> {q.author} &nbsp; | &nbsp; </p> */}
-                        {/* <p><span className="quoteDetails">Tags:</span> {q.tags}</p> */}
+                        <ul className="quoteTags">{q.props.quotes.tags.map((tag, id) => <li key={id}>{tag}</li>)}</ul>
                     </div>
                 </div>
             ))}

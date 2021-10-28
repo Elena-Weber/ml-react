@@ -46,7 +46,6 @@ filterQuotes = () => {
     let searchedWordLowerCase = this.state.searchedWord.toLowerCase() // setting searched letters to lower case
 
     let initialQuotes = this.state.quotes.filter(q => q.content.toLowerCase().includes(searchedWordLowerCase)) // looking for them among quotes
-    // let initialQuotes = this.state.quotes.filter(q => console.log(q.content))
 
     let allFamous = initialQuotes.filter(q => q.tags.includes("famous-quotes"))
     let allWisdom = initialQuotes.filter(q => q.tags.includes("wisdom"))
@@ -96,7 +95,6 @@ updateFilter = (category) => { // setting state category in state to trigger fil
                 </div>
 
                 <div className="quotesDiv">
-                    {/* <Quote quotes={this.state.quotes}/> */}
                     <Quote quotes={this.filterQuotes()}/>
                 </div>
             </>

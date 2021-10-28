@@ -3,7 +3,8 @@ import QuoteList from './QuoteList';
 
 function App() {
   return (
-    <div className="App"><h1>Hello!</h1>
+    <div className="App">
+      <h1>QUOTATOR</h1>
       <QuoteList/>
     </div>
   );
