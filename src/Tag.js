@@ -6,33 +6,39 @@ const Tag = (props) => {
             <h2 className="filterHeading">Categories of quotes:</h2>
             <button
                 type="button"
-                value="life"
+                value="famous"
                 name="filter"
-                onClick={(e) => console.log(e.target.value)}>Life
+                onClick={(e) => props.updateFilter(e.target.value)}>Famous
             </button>
             <button
                 type="button"
-                value="love"
+                value="wisdom"
                 name="filter"
-                onClick={(e) => console.log(e.target.value)}>Love
+                onClick={(e) => props.updateFilter(e.target.value)}>Wisdom
             </button>
             <button
                 type="button"
                 value="happiness"
                 name="filter"
-                onClick={(e) => console.log(e.target.value)}>Happiness
+                onClick={(e) => props.updateFilter(e.target.value)}>Happiness
             </button>
             <button
                 type="button"
-                value="science"
+                value="friendship"
                 name="filter"
-                onClick={(e) => console.log(e.target.value)}>Science
+                onClick={(e) => props.updateFilter(e.target.value)}>Friendship
             </button>
             <button
                 type="button"
-                value="nature"
+                value="inspirational"
                 name="filter"
-                onClick={(e) => console.log(e.target.value)}>Nature
+                onClick={(e) => props.updateFilter(e.target.value)}>Inspirational
+            </button>
+            <button
+                type="button"
+                value="all"
+                name="filter"
+                onClick={(e) => props.updateFilter(e.target.value)}>All
             </button>
         </div>
     )
