@@ -8,7 +8,7 @@ This is a React project which uses this free API: https://github.com/lukePeavey/
 $ yarn install
 * To start the server, run in the terminal:
 $ yarn start
-* The browser (Chrome is recommended) should open the page http://localhost:3000 where you can see the main page of the application. If that doesn't happen, do it manually.
+* The browser (Chrome is recommended) should open the page http://localhost:3000 where you can see the application. If that doesn't happen, do it manually.
 
 ## Features:
 * User can see all quotes fetched and change the category.
