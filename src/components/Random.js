@@ -1,4 +1,4 @@
-import React from "react"
+import React from 'react';
 
 export default function Random() {
     const [data, setData] = React.useState(null);
@@ -11,7 +11,7 @@ export default function Random() {
             setData(data);
         } catch (error) {
             console.error(error);
-            setData({ content: "Something went wrong" })
+            setData({ content: "We are sorry. Something went wrong. Please update the page." })
         }
     }
 
@@ -24,9 +24,17 @@ export default function Random() {
 
     return ( // what to display
         <div className="random">
-            <div><button onClick={updateQuote}>Generate a random quote</button></div>
-            <p className="quoteContent">{data.content}</p>
-            <p>Source: {data.author}</p>
+            <div className="welcome">
+                <h2>Welcome to the collection of the best motivational quotes of the world!</h2>
+                <h3>Get inspired by William Shakespeare, Leonardo da Vinci, Buddha, Thomas Jefferson, Confucius and many others.</h3>
+            </div>
+            <div>
+                <button onClick={updateQuote}>Generate a random quote</button>
+            </div>
+            <div className="quote">
+                <h3 className="quoteContent">{data.content}</h3>
+                <p className="quoteDetails">Author: {data.author}</p>
+            </div>
         </div>
     )
 }

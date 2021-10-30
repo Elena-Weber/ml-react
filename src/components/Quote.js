@@ -13,7 +13,7 @@ const Quote = (quotes) => {
                     <div className="quote" key={id} >
                         <h3 className="quoteContent"> {q.props.quotes.content} </h3>
                         <div className="details">
-                            <p><span className="quoteDetails">Source:</span> {q.props.quotes.author} </p>
+                            <p><span className="quoteDetails">Author:</span> {q.props.quotes.author} </p>
                             <div className="quoteTags">
                                 {q.props.quotes.tags.map((tag, id) =>
                                     <li key={id}> {tag} </li>

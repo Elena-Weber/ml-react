@@ -12,8 +12,9 @@ const App = () => {
       <Router>
         <Navi/>
         <Switch>
-          <Route exact path="/" component={ QuoteList } />
-          <Route exact path="/random" component={ Random } />
+          {/* <Route exact path="/" component={ QuoteList } /> */}
+          <Route exact path="/" component={ Random } />
+          <Route exact path="/all_quotes" component={ QuoteList } />
         </Switch>
       </Router>
     </div>
