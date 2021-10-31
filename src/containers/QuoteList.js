@@ -1,3 +1,5 @@
+// CLASS component
+
 import React, { Component } from 'react';
 import Tag from '../components/Tag.js';
 import Quote from '../components/Quote.js';

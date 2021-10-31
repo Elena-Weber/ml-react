@@ -1,6 +1,6 @@
 # Hello!
 
-This is a React project which uses this free API: https://github.com/lukePeavey/quotable to fetch and display inspirational quotes.
+This is a React SPA which uses this free API: https://github.com/lukePeavey/quotable to fetch and display inspirational quotes.
 
 ## Usage:
 * Fork the project from https://github.com/Elena-Weber/ml-react.
