@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Author = (props) => {
-
+// filtering quotes by author
     return (
         <div className="tag">
             <h2 className="filterAuthors">Choose the genius to see their quotes:</h2>

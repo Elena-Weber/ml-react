@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Navi from './components/Navi';
 import QuoteList from './containers/QuoteList';
 import Random from './components/Random';
-import AuthorsList from './containers/Authors';
+import AuthorsList from './containers/AuthorsList';
 import './App.css';
 
 const App = () => {

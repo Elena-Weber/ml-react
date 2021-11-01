@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Quote = (quotes) => {
-console.log(quotes)
+// console.log(quotes.quotes)
     if (quotes.quotes.length === 0) {
         return (
             <h3>Sorry, there is nothing to display. Please search for another word or make sure the spelling is correct.</h3>

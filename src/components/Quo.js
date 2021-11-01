@@ -1,10 +1,10 @@
 import React from 'react';
 
 const Quo = (quotes) => {
-
+// console.log(quotes.quotes)
     if (quotes.quotes.length === 0) {
         return (
-            <h3>Sorry, there is nothing to display. Please search for another word or make sure the spelling is correct.</h3>
+            <h3>Sorry, there is nothing to display.</h3>
         )
     } else {
         return (

@@ -3,9 +3,11 @@
 import React, { useState, useEffect } from 'react';
 
 const Random = () => {
+    // setting initial state
     const [data, setData] = useState(null)
     const [isLoaded, setIsLoaded] = useState(false)
 
+    // fetching API
     async function updateQuote() {
         try {
             const response = await fetch("https://api.quotable.io/random") // fetching API
