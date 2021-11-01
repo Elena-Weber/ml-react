@@ -1,6 +1,8 @@
+// FUNCTIONAL component with hooks
+
 import React, { useState, useEffect } from 'react';
 
-export default function Random() {
+const Random = () => {
     const [data, setData] = useState(null)
     const [isLoaded, setIsLoaded] = useState(false)
 
@@ -17,12 +19,12 @@ export default function Random() {
         }
     }
 
-  // what to do after component mounts
+  // what to do after component has mounted
     useEffect(() => {
         updateQuote();
     }, [])
 
-    if (!data) return null // if nothing returns
+    if (!data) return null // if there's no data
 
     return ( // what to display
         <div className="random">
@@ -34,11 +36,13 @@ export default function Random() {
                 <button onClick={updateQuote}>Generate a random quote</button>
             </div>
             { !isLoaded ? (<div><h1>Loading...</h1></div>) : ( // while waiting for a quote to be loaded
-            <div className="quote">
-                <h3 className="quoteContent">{data.content}</h3>
-                <p className="quoteDetails">Author: {data.author}</p>
-            </div>
+                <div className="quote">
+                    <h3 className="quoteContent">{data.content}</h3>
+                    <p className="quoteDetails">Author: {data.author}</p>
+                </div>
             )}
         </div>
     )
 }
+
+export default Random;

@@ -94,7 +94,7 @@ class QuoteList extends Component {
             return (
             <>
                 <div className="tags">
-                    <Tag filtering={this.state.filtering} updateFilter={this.updateFilter}/>
+                    <Tag updateFilter={this.updateFilter}/>
                 </div>
                 <div className="search">
                     <Search searchQuoteProp={this.state.searchedWord} search={this.searchForQuote} />

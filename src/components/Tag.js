@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Tag = (props) => {
+
     return (
         <div className="tag">
             <h2 className="filterCategories">Choose the category of quotes:</h2>
