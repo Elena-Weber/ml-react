@@ -24,15 +24,14 @@ const AuthorsList = () => {
         }
     }
 
-    // set new state (author to change API endpoint later on)
     useEffect(() => {
         setAuthor(quoteAuthor);
-    }, [])
+    }, [quoteAuthor])
 
     // fetching different API endpoint every time author changes
     useEffect(() => {
-        updateAuthor();
-    }, [quoteAuthor])
+        updateAuthor()
+    }, [quoteAuthor]) // eslint-disable-line react-hooks/exhaustive-deps
 
     if (!data) return null // if no data is present
 

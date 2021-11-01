@@ -12,10 +12,10 @@ $ yarn start
 * The browser (Chrome is recommended) should open the page http://localhost:3000 where you can see the application. If that doesn't happen, do it manually.
 
 ## Features:
-* User can see all quotes fetched from API and filter them the category.
+* User can see all quotes fetched from API and filter them by category.
 * User can use the search function.
 * User can generate a random quote.
-* User can view quotes by author.
+* User can filter quotes by author.
 
 ## Contributing:
 Bug reports and pull requests are welcome on GitHub at https://github.com/Elena-Weber/ml-react. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the code of conduct.
