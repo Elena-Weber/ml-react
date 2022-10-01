@@ -1,6 +1,10 @@
 import React from 'react';
+import { hotjar } from 'react-hotjar';
 
 const Author = (props) => {
+
+    hotjar.initialize(3182620, 6);
+    
 // filtering quotes by author
     return (
         <div className="tag">

@@ -1,6 +1,10 @@
 import React from 'react';
+import { hotjar } from 'react-hotjar';
 
 const Quo = (quotes) => {
+
+    hotjar.initialize(3182620, 6);
+
 // console.log(quotes.quotes)
     if (quotes.quotes.length === 0) {
         return (

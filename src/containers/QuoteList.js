@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Tag from '../components/Tag.js';
 import Quote from '../components/Quote.js';
 import Search from '../components/Search.js';
+import { hotjar } from 'react-hotjar';
 
 class QuoteList extends Component {
 
@@ -21,6 +22,9 @@ class QuoteList extends Component {
 
     // what to do after the component has mounted
     componentDidMount() {
+
+        hotjar.initialize(3182620, 6);
+        
         fetch("https://quotable.io/quotes?limit=50")
         .then(resp => resp.json()) // transform data from API to json format
         .then(data => { // set state
