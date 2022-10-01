@@ -3,8 +3,16 @@
 import React, { useState, useEffect } from 'react';
 import Author from '../components/Author';
 import Quo from '../components/Quo';
+import { hotjar } from 'react-hotjar';
 
 const AuthorsList = () => {
+
+    hotjar.initialize(3182620, 6);
+
+    if (hotjar.initialized()) {
+        hotjar.identify('USER_ID', { userProperty: 'value' });
+    }
+
     // setting the initial state
     const [data, setData] = useState(null)
     const [isLoaded, setIsLoaded] = useState(false)

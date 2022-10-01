@@ -1,6 +1,14 @@
 import React from 'react';
+import { hotjar } from 'react-hotjar';
 
 const Quote = (quotes) => {
+
+    hotjar.initialize(3182620, 6);
+
+    if (hotjar.initialized()) {
+        hotjar.identify('USER_ID', { userProperty: 'value' });
+    }
+
 // console.log(quotes.quotes)
     if (quotes.quotes.length === 0) {
         return (
