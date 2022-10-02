@@ -58,21 +58,21 @@ class QuoteList extends Component {
         // filtering into categories
         let allFamous = initialQuotes.filter(q => q.tags.includes("famous-quotes"))
         let allWisdom = initialQuotes.filter(q => q.tags.includes("wisdom"))
-        let allHappiness = initialQuotes.filter(q => q.tags.includes("happiness"))
+        let allSports = initialQuotes.filter(q => q.tags.includes("sports"))
         let allFriendship = initialQuotes.filter(q => q.tags.includes("friendship"))
-        let allInspirational = initialQuotes.filter(q => q.tags.includes("inspirational"))
+        let allHumorous = initialQuotes.filter(q => q.tags.includes("humorous"))
 
         switch(this.state.filtering) {
             case "famous": // what to display after "famous" button is clicked
                 return allFamous.map( (q, id) => { return <Quote quotes={q} key={id} /> })
             case "wisdom": // what to display after "wisdom" button is clicked
                 return allWisdom.map( (q, id) => { return <Quote quotes={q} key={id} /> })
-            case "happiness": // what to display after "happiness" button is clicked
-                return allHappiness.map( (q, id) => { return <Quote quotes={q} key={id} /> })
+            case "sports": // what to display after "sports" button is clicked
+                return allSports.map( (q, id) => { return <Quote quotes={q} key={id} /> })
             case "friendship": // what to display after "friendship" button is clicked
                 return allFriendship.map( (q, id) => { return <Quote quotes={q} key={id} /> })
-            case "inspirational": // what to display after "inspirational" button is clicked
-                return allInspirational.map( (q, id) => { return <Quote quotes={q} key={id} /> })
+            case "humorous": // what to display after "humorous" button is clicked
+                return allHumorous.map( (q, id) => { return <Quote quotes={q} key={id} /> })
             case "all": // what to display after "all" button is clicked
                 return initialQuotes.map( (q, id) => { return <Quote quotes={q} key={id} /> })
             default: // default display

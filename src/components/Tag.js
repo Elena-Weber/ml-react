@@ -19,9 +19,9 @@ const Tag = (props) => {
             </button>
             <button
                 type="button"
-                value="happiness"
+                value="sports"
                 name="filter"
-                onClick={(e) => props.updateFilter(e.target.value)}>Happiness
+                onClick={(e) => props.updateFilter(e.target.value)}>Sports
             </button>
             <button
                 type="button"
@@ -31,9 +31,9 @@ const Tag = (props) => {
             </button>
             <button
                 type="button"
-                value="inspirational"
+                value="humorous"
                 name="filter"
-                onClick={(e) => props.updateFilter(e.target.value)}>Inspirational
+                onClick={(e) => props.updateFilter(e.target.value)}>Humorous
             </button>
             <button
                 type="button"
